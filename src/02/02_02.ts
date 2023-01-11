@@ -15,6 +15,7 @@ export type AddressType = {
 };
 
 export type HouseType = {
+  id?: number;
   buildedAt: number;
   repaired: boolean;
   address: AddressType;
@@ -22,6 +23,7 @@ export type HouseType = {
 
 export type CityType = {
   title: string;
+
   houses: HouseType[];
   govermentBuildings: GovermentBuildingType[];
   citizensNumber: number;
