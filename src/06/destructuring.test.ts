@@ -25,7 +25,11 @@ test("", () => {
 
 test("", () => {
   const [ls1, ls2] = props.lessons;
+  const [l1, ...restLessons] = props.lessons;
 
   expect(ls1.title).toBe("1");
   expect(ls2.title).toBe("2");
+
+  expect(l1.title).toBe("1");
+  expect(restLessons.length).toBe(1);
 });
